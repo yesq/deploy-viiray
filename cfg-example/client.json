@@ -1,0 +1,35 @@
+{
+    "inbound": {
+        "port": 1080,
+        "listen": "0.0.0.0",
+        "protocol": "http",
+        "settings": {
+            "timeout": 0,
+            "accounts": [
+                {
+                "user": "****",
+                "pass": "****"
+                }
+            ],
+            "allowTransparent": false,
+            "userLevel": 0
+        }
+    },
+    "outbound": {
+        "protocol": "vmess", // 出口协议
+        "settings": {
+        "vnext": [
+            {
+            "address": "1.1.1.1", // 服务器地址，请修改为你自己的服务器 ip 或域名
+            "port": 1111,  // 服务器端口
+            "users": [
+                {
+                "id": "-6324-4d53-ad4f-8cda48b30810",  // 用户 ID，必须与服务器端配置相同
+                "alterId": 32 // 此处的值也应当与服务器相同
+                }
+            ]
+            }
+        ]
+        }
+    }
+}
